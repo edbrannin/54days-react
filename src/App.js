@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import "react-tabs/style/react-tabs.css";
+import "./react-tabs-pill.css";
 
 import './App.css'
 import './site.css'
 import ALL_MYSTERIES from '../data/mysteries'
 import CLOSING_PRAYERS from '../data/closing_prayer'
 import { currentDay, intentionType, mysteriesFor } from './helpers'
-
 
 class App extends Component {
   render() {
