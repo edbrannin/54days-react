@@ -1,11 +1,14 @@
+body.dark {
+  color: lightgray;
+  background: #111;
+}
+
 .App {
   height: 100%;
   min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  color: lightgray;
-  background: #111;
 }
 
 .App-flex {
