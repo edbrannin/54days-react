@@ -24,7 +24,17 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="row align-self-center">
+        <h1 style={{
+          textAlign: 'center',
+        }}>54-Day Rosary Novena</h1>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-evenly',
+          width: '100%',
+          paddingBottom: '1em',
+          // backgroundColor: 'lightgray',
+          // color: '#111',
+        }}>
           <div>Day {day + 1}</div>
           <div>Mysteries: {todayMysteries}</div>
           <div>Intention type: {todayIntention}</div>
