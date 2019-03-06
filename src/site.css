@@ -1,0 +1,14 @@
+.mysteries h2,
+#closing-prayer h4,
+#toc li,
+#closing-toc li,
+#intention-type,
+#mysteries,
+ol.mysteries li .name,
+.capitalize {
+  text-transform: capitalize;
+}
+
+.bold {
+  font-weight: bold;
+}

@@ -1,0 +1,110 @@
+{
+  "Glorious": [
+    {
+      "fruit": "Faith",
+      "name": "Resurrection",
+      "reflection": "It takes great faith to believe that Jesus rose from the dead and that we, too, shall rise.  As Jesus told his apostles, \"Blessed are that who have not seen, and yet believe.\" This mystery offers us help in maintaining that faith.  \"Lord, I believe.  Please help my unbelief!\""
+    },
+    {
+      "fruit": "Hope, Desire for Heaven",
+      "name": "Ascension",
+      "reflection": "We hope for a world that is better than this one.  We desire to live forever with Jesus in heaven.  May that hope help shape our lives here on Earth."
+    },
+    {
+      "fruit": "Wisdom, Love of God",
+      "name": "Descent of the Holy Spirit",
+      "reflection": "The disciples were scared.  They huddled together in that upper room not sure of what to do.  Then the Spirit of the Lord came upon them and they were ready to go out and give their very lives in service to God.  May the Holy Spirit also grant us that wisdom and love of God."
+    },
+    {
+      "fruit": "Devotion to Mary",
+      "name": "Assumption of Mary",
+      "reflection": "Mary was brought up to heaven body and soul.  We are devoted to her because of her relationship to her Son and because God saw fit to raise her up.  \"Blessed are you among women and Blessed is the fruit of your womb, Jesus.\""
+    },
+    {
+      "fruit": "Eternal Happiness",
+      "name": "Coronation of the Blessed Virgin Mary",
+      "reflection": "Mary is the Queen of Heaven, enjoying forever her rightful place next to her Son.  May we one day share in her happiness."
+    }
+  ],
+  "Joyful": [
+    {
+      "fruit": "Humility",
+      "name": "Annunciation",
+      "reflection": "It is appropriate to begin the rosary with the virtue of humility. The _Catechism of the Catholic Church_ states that \"humility is the foundation of prayer. Only when we humbly acknowledge that 'we do not know how to pray as we ought,' are we ready to receive freely the gift of prayer. 'Man is a beggar before God.'\" (CCC 2559)"
+    },
+    {
+      "fruit": "Love of Neighbor",
+      "name": "Visitation",
+      "reflection": "Mary hastened to her cousin Elizabeth's house to help her in her time of need. In what ways can we be of service to our own neighbor's today, whether we find that neighbor in our own home, in our community, at work, or on the internet?"
+    },
+    {
+      "fruit": "Poverty of Spirit, Detachment from the Things of the World",
+      "name": "Nativity of the Lord",
+      "reflection": "We live in a very consumerist culture. This mystery invites us to detach ourselves from our many possessions. What do we truly need and what is excess? What can we share with others?"
+    },
+    {
+      "fruit": "Obedience",
+      "name": "Presentation",
+      "reflection": "Mary and Joseph humbly brought Jesus to the temple in accord with Jewish law. Obedience to God and to others can be very difficult, but offers us the opportunity to subjugate our own will to that of our heavenly Father. Not my will, but God's will be done."
+    },
+    {
+      "fruit": "Piety",
+      "name": "Finding of the Child Jesus in the Temple",
+      "reflection": "Piety is dedication to the Church's sacramental life and devotions. Mary and Joseph were surprised to find Jesus in the temple. We, too, should be dedicated to our Church and the sacraments."
+    }
+  ],
+  "Luminous": [
+    {
+      "fruit": "Openness to the Holy Spirit",
+      "name": "Baptism of Jesus",
+      "reflection": "We each receive the Holy Spirit in a special way in Baptism and again at Confirmation. The gifts of the Holy Spirit are wisdom, understanding, counsel, fortitude, knowledge, piety, and fear of the Lord. We need only ask the Holy Spirit for help and help will be provided."
+    },
+    {
+      "fruit": "To Jesus through Mary",
+      "name": "Miracle at Cana",
+      "reflection": "Mary encouraged her Son to perform his first miracle at the Wedding at Cana. She simply told the servants to \"do whatever he tells you.\" She helps us in a similar way — always pointing us to her Son and interceding on our behalf. We need only to turn to her and ask for help."
+    },
+    {
+      "fruit": "Repentance, Trust in God",
+      "name": "Proclamation of the Kingdom of God",
+      "reflection": "Jesus spent the active years of his ministry preaching and performing miracles to proclaim the Kingdom of God. He asks us to express sorrow from our sin, turn away from sin, and trust in God."
+    },
+    {
+      "fruit": "Desire for Holiness",
+      "name": "Transfiguration",
+      "reflection": "Jesus gave three of his closest friends a glimpse of His glory at the Transfiguration. We, too, are called to holiness, and to ultimately live in glory in heaven. But, we need to want it and we need to want it more than what the world and the devil attempts to offer us."
+    },
+    {
+      "fruit": "Eucharistic Adoration, Active Participation at Mass",
+      "name": "Institution of the Eucharist",
+      "reflection": "Jesus gave us the greatest gift in the Eucharist. He gave us His very self. This mystery invites us to appreciate that gift fully and to participate at Mass often"
+    }
+  ],
+  "Sorrowful": [
+    {
+      "fruit": "Contrition, Conformity to the Will of God",
+      "name": "Agony in the Garden",
+      "reflection": "Jesus, both fully human and fully divine, suffered immensely in the garden.  He knew what was coming and he was terrified.  He begged His Father to spare him, but submitted Himself fully to His will.  We, too, are called to do this."
+    },
+    {
+      "fruit": "Purity, Mortification",
+      "name": "Scourging at the Pillar",
+      "reflection": "Mortification isn't popular these days, but making small sacrifices and offering them up can be a great help to one's spiritual life.  There is an opportunity every day to sacrifice and to suffer in some small way."
+    },
+    {
+      "fruit": "Moral Courage",
+      "name": "Crowning with Thorns",
+      "reflection": "Jesus remained resolute even as he was being made fun of.  Do we have the courage to stand up for our convictions even when we are being laughed at? Whose opinion matters more – God's or those who surround us?"
+    },
+    {
+      "fruit": "Patience",
+      "name": "Carrying of the Cross",
+      "reflection": "Patience is something we all seem to have difficulty with. Jesus patiently carried his cross through the streets of Jerusalem on the way to his Crucifixion.  We can look to him for help when we are tempted to lose our patience."
+    },
+    {
+      "fruit": "Salvation, Self-Denial",
+      "name": "Crucifixion",
+      "reflection": "Jesus gave up everything for us on the cross.  His took on the sins of the world, past, present, and future, and died for our salvation.  We need to be so thankful for that gift.  At the same time, when we are asked to die to ourselves and put others first, we can look to the cross for the example of total self-giving."
+    }
+  ]
+}

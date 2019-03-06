@@ -12,8 +12,11 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
+    "moment": "^2.24.0",
+    "moment-easter": "https://github.com/nzdenek/moment-easter.git#module-checks",
     "react": "^16.8.3",
-    "react-dom": "^16.8.3"
+    "react-dom": "^16.8.3",
+    "react-tabs": "^3.0.0"
   },
   "devDependencies": {
     "nwb": "0.21.x"
