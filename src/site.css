@@ -8,7 +8,3 @@ ol.mysteries li .name,
 .capitalize {
   text-transform: capitalize;
 }
-
-.bold {
-  font-weight: bold;
-}
