@@ -78,6 +78,9 @@ class App extends Component {
             {CLOSING_PRAYERS[todayIntention].Plural}
           </TabPanel>
         </Tabs>
+        <div>
+          &nbsp;
+        </div>
       </div>
     )
   }
