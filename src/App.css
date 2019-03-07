@@ -9,6 +9,7 @@ body.dark {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
+  margin-bottom: 2em;
 }
 
 .App-flex {
