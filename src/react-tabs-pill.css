@@ -1,5 +1,6 @@
 .react-tabs {
   -webkit-tap-highlight-color: transparent;
+  margin: 1em;
 }
 
 .react-tabs__tab-list {
