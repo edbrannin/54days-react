@@ -4,7 +4,7 @@
   "description": "Describe 54-days-nwb here",
   "private": true,
   "scripts": {
-    "build": "nwb build-react-app",
+    "build": "mkdir dist; nwb build-react-app",
     "clean": "nwb clean-app",
     "start": "nwb serve-react-app",
     "test": "nwb test-react",
