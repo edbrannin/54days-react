@@ -7,8 +7,20 @@ import './site.css'
 import ALL_MYSTERIES from '../data/mysteries'
 import CLOSING_PRAYERS from '../data/closing_prayer'
 import { currentDay, intentionType, mysteriesFor } from './helpers'
+import StatusBar from './StatusBar'
+import MysteriesPanel from './MysteriesPanel'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      day: currentDay()
+    }
+    this.onSetDay = (day) => {
+      this.setState({ day })
+    }
+  }
+
   render() {
     const categories = [
       "Joyful",
@@ -17,7 +29,7 @@ class App extends Component {
       "Glorious",
     ]
 
-    const day = currentDay()
+    const { day } = this.state;
     const todayMysteries = mysteriesFor(day)
     const todayIntention = intentionType(day)
 
@@ -26,18 +38,7 @@ class App extends Component {
         <h1 style={{
           textAlign: 'center',
         }}>54-Day Rosary Novena</h1>
-        <div style={{
-          display: 'flex',
-          justifyContent: 'space-evenly',
-          width: '100%',
-          paddingBottom: '1em',
-          // backgroundColor: 'lightgray',
-          // color: '#111',
-        }}>
-          <div>Day {day + 1}</div>
-          <div>Mysteries: {todayMysteries}</div>
-          <div>Intention type: {todayIntention}</div>
-        </div>
+        <StatusBar day={day} todayIntention={todayIntention} todayMysteries={todayMysteries} onSetDay={this.onSetDay} />
 
         <Tabs defaultIndex={categories.indexOf(todayMysteries)}>
           <TabList>
@@ -47,21 +48,7 @@ class App extends Component {
           </TabList>
           {categories.map(category => (
             <TabPanel>
-              <h2>{category}</h2>
-              <ol>
-                {ALL_MYSTERIES[category].map(mystery => (
-                  <li style={{
-                    marginBottom: '1em',
-                  }}>
-                    <div style={{
-                      fontWeight: 'bold',
-                    }}>The {mystery.name}</div>
-                    <div style={{ fontStyle: 'italic', }}>Fruit of the mystery: {mystery.fruit}</div>
-                    {/*SmartyPants for refelction?*/}
-                    <div>{mystery.reflection}</div>
-                  </li>
-                ))}
-              </ol>
+              <MysteriesPanel name={category} mysteries={ALL_MYSTERIES[category]} />
             </TabPanel>
           ))}
         </Tabs>
