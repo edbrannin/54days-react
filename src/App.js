@@ -1,5 +1,7 @@
 import React, { Component, useState } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import useLocalstorage from "@rooks/use-localstorage";
+
 import "./react-tabs-pill.css";
 
 import './App.css'
@@ -10,6 +12,7 @@ import { currentDay, intentionType, mysteriesFor } from './helpers'
 import StatusBar from './StatusBar'
 import MysteriesPanel from './MysteriesPanel'
 
+
 const categories = [
   "Joyful",
   "Luminous",
@@ -17,10 +20,18 @@ const categories = [
   "Glorious",
 ]
 
+const useCurrentDay = () => {
+  const { value, set } = useLocalstorage("current-day", currentDay())
+  return [ Number(value) % 54, set ];
+}
+
 const App = () => {
-  const [day, setDay] = useState(currentDay());
+  const [day, setDay] = useCurrentDay()
+
   const todayMysteries = mysteriesFor(day)
   const todayIntention = intentionType(day)
+
+
 
   return (
     <div className="App">
@@ -32,11 +43,11 @@ const App = () => {
       <Tabs defaultIndex={categories.indexOf(todayMysteries)}>
         <TabList>
           {categories.map(category => (
-            <Tab>{category}</Tab>
+            <Tab key={category}>{category}</Tab>
           ))}
         </TabList>
         {categories.map(category => (
-          <TabPanel>
+          <TabPanel key={category}>
             <MysteriesPanel name={category} mysteries={ALL_MYSTERIES[category]} />
           </TabPanel>
         ))}
@@ -54,9 +65,16 @@ const App = () => {
           {CLOSING_PRAYERS[todayIntention].Plural}
         </TabPanel>
       </Tabs>
-      <div>
-        &nbsp;
-        </div>
+      <div onClick={() => setDay(day + 1)} style={{
+        textAlign: 'center',
+        border: '1px solid gray',
+        backgroundColor: 'blue',
+        borderRadius: '1em',
+        padding: '1em',
+        margin: '1em',
+      }}>
+        Done
+      </div>
     </div>
   )
 }
