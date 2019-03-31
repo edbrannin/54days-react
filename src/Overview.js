@@ -14,7 +14,7 @@ const Overview = () => {
       textAlign: 'center',
     }}>
       <h2>Progress</h2>
-      <div>This is day {currentDay + 1}</div>
+      <h3>This is day {currentDay + 1}</h3>
       <div style={{
         display: 'flex',
         justifyContent: 'space-evenly',
@@ -27,8 +27,8 @@ const Overview = () => {
           Next Day &rarr;
         </Button>
       </div>
-      <div>Mysteries: {todayMysteries}</div>
-      <div>Intention type: {todayIntention}</div>
+      <h3>Mysteries: {todayMysteries}</h3>
+      <h3>Intention type: {todayIntention}</h3>
       <h2>Start</h2>
       <LinkButton to={`/pray/${todayMysteries}`}>Show Mysteries</LinkButton>
       <LinkButton to={`/pray/${todayMysteries}/1`}>Start</LinkButton>
