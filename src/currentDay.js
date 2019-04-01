@@ -3,7 +3,8 @@ import useLocalstorage from "@rooks/use-localstorage";
 import { currentDay, intentionType, mysteriesFor } from './helpers'
 
 const useCurrentDay = () => {
-  const { value, set } = useLocalstorage("current-day", currentDay())
+  const targetCurrentDay = currentDay()
+  const { value, set } = useLocalstorage("current-day", targetCurrentDay)
   const day = Number(value) % 54
   const todayMysteries = mysteriesFor(day)
   const todayIntention = intentionType(day)
@@ -17,6 +18,7 @@ const useCurrentDay = () => {
     todayIntention,
     incrementDay,
     decrementDay,
+    targetCurrentDay,
   };
 }
 
