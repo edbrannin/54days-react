@@ -24,17 +24,3 @@ const App = () => (
 )
 
 export default App
-
-
-/*
-    <div className="App">
-
-      <MysteriesTabPanel todayMysteries={todayMysteries} />
-      <ClosingPrayersTabPanel todayIntention={todayIntention} />
-
-      <Button onClick={() => setDay(day + 1)}>
-        Done
-      </Button>
-
-    </div>
-    */
