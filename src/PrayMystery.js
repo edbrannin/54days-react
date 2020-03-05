@@ -29,7 +29,7 @@ const PrayMystery = ({ mysteryCategory, decade }) => {
   )
   return (
     <div>
-      <p>The {decadeLabels[decade]} {mysteryCategory} Mystery</p>
+      <p>The {decadeLabels[decade - 1]} {mysteryCategory} Mystery</p>
       <MysteryDetail {...ALL_MYSTERIES[mysteryCategory][decadeNumber]} />
       <ButtonBar>
         {prevButton}
