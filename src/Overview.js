@@ -32,9 +32,10 @@ const getMysteries = (mysteriesByWeekday, { todayMysteries }) => {
 }
 
 const useMysteries = ({ todayMysteries }) => {
-  const { value: mysteriesByWeekday, set: setMysteriesByWeekday } = useLocalstorage("mysteries-by-weekday", false);
+  const { value, set: setMysteriesByWeekday } = useLocalstorage("mysteries-by-weekday", "false");
+  const mysteriesByWeekday = JSON.parse(value)
   const actualMysteries = getMysteries(mysteriesByWeekday, { todayMysteries });
-  const toggleMysteriesByWeekday = () => setMysteriesByWeekday(!mysteriesByWeekday);
+  const toggleMysteriesByWeekday = () => setMysteriesByWeekday(JSON.stringify(!mysteriesByWeekday));
   return { actualMysteries, mysteriesByWeekday, toggleMysteriesByWeekday };
 }
 
