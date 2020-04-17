@@ -2,7 +2,6 @@ import React from 'react'
 import useLocalstorage from "@rooks/use-localstorage";
 import Button from './Button'
 import moment from 'moment-easter'
-import { Link } from "@reach/router"
 import useCurrentDay from './currentDay'
 import LinkButton from './LinkButton'
 
