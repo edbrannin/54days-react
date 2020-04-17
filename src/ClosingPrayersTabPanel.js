@@ -5,7 +5,8 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import CLOSING_PRAYERS from '../data/closing_prayer'
 
 const ClosingPrayersTabPanel = ({ todayIntention }) =>{
-  const { set: setDefaultIndex, value: defaultIndex } = useLocalstorage('closing-prayer-tab-index', 0);
+  const { set: setDefaultIndex, value } = useLocalstorage('closing-prayer-tab-index', 0);
+  const defaultIndex = Number(value);
   return (
     <Tabs defaultIndex={defaultIndex} onSelect={index => setDefaultIndex(index)}>
       <TabList>
