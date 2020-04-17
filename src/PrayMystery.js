@@ -30,8 +30,12 @@ const PrayMystery = () => {
     <LinkButton to={`./${decadeNumber + 2}`}>Next</LinkButton>
   )
   return (
-    <div>
-      <p>The {decadeLabels[decade - 1]} {mysteryCategory} Mystery</p>
+    <div style={{
+      display: 'grid',
+      minHeight: '80%',
+      gridTemplateRows: 'auto 1fr auto',
+    }}>
+      <div>The {decadeLabels[decade - 1]} {mysteryCategory} Mystery</div>
       <MysteryDetail {...ALL_MYSTERIES[mysteryCategory][decadeNumber]} />
       <ButtonBar>
         {prevButton}
