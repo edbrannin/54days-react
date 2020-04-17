@@ -1,5 +1,9 @@
 import React from 'react'
-import { Router } from "@reach/router"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 import "./react-tabs-pill.css";
 import './App.css'
@@ -10,16 +14,32 @@ import PrayMystery from './PrayMystery'
 import ClosingPrayer from './ClosingPrayer'
 
 import Overview from './Overview'
-import Main from './Main'
 
 const App = () => (
   <Router>
-    <Main path="/">
-      <Overview path="/" />
-      <Pray path="/pray/:mysteryCategory" />
-      <PrayMystery path="/pray/:mysteryCategory/:decade" />
-      <ClosingPrayer path="/pray/closing" />
-    </Main>
+    <div style={{
+      margin: '1em',
+      height: '100%',
+    }}>
+      <h1 style={{
+        textAlign: 'center',
+      }}>54-Day Rosary Novena</h1>
+      <Switch>
+        <Route exact path="/">
+          <Overview/>
+        </Route>
+        <Route path="/pray/closing">
+          <ClosingPrayer/>
+        </Route>
+        <Route path="/pray/:mysteryCategory/:decade">
+          <PrayMystery/>
+        </Route>
+        <Route path="/pray/:mysteryCategory">
+          <Pray/>
+        </Route>
+      </Switch>
+
+    </div>
   </Router>
 )
 

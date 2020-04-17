@@ -1,16 +1,18 @@
 import React from 'react'
-import { navigate } from "@reach/router"
-
+import { useHistory } from "react-router-dom";
 import Button from './Button';
 
+
 const LinkButton = ({ to, children, onClick }) => {
+  const history = useHistory();
+
   const myOnClick = () => {
     console.log('in myOnClick')
     if (onClick) {
       console.log('Running onClick:', onClick)
       onClick()
     }
-    navigate(to)
+    history.push(to)
   }
   return <Button onClick={myOnClick}>{children}</Button>
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useParams } from "react-router-dom";
 
 import MysteryDetail from './MysteryDetail';
 import LinkButton from './LinkButton'
@@ -15,7 +16,8 @@ const decadeLabels = [
 ]
 
 
-const PrayMystery = ({ mysteryCategory, decade }) => {
+const PrayMystery = () => {
+  const { mysteryCategory, decade } = useParams();
   const decadeNumber = Number(decade) - 1
   const prevButton = decadeNumber === 0 ? (
     <LinkButton to="..">Back</LinkButton>
