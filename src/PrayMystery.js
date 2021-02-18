@@ -1,5 +1,7 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
+import styled from 'styled-components'
+import FitText from '@kennethormandy/react-fittext'
 
 import MysteryDetail from './MysteryDetail';
 import LinkButton from './LinkButton'
@@ -15,6 +17,11 @@ const decadeLabels = [
   "Fifth",
 ]
 
+const Wrapper = styled.div`
+  display: grid;
+  min-height: 80%;
+  grid-template-rows: auto 1fr auto;
+`;
 
 const PrayMystery = () => {
   const { mysteryCategory, decade } = useParams();
@@ -30,18 +37,16 @@ const PrayMystery = () => {
     <LinkButton to={`./${decadeNumber + 2}`}>Next</LinkButton>
   )
   return (
-    <div style={{
-      display: 'grid',
-      minHeight: '80%',
-      gridTemplateRows: 'auto 1fr auto',
-    }}>
+    <Wrapper>
       <div>The {decadeLabels[decade - 1]} {mysteryCategory} Mystery</div>
-      <MysteryDetail {...ALL_MYSTERIES[mysteryCategory][decadeNumber]} />
+      <FitText compressor={3}>
+        <MysteryDetail {...ALL_MYSTERIES[mysteryCategory][decadeNumber]} />
+      </FitText>
       <ButtonBar>
         {prevButton}
         {nextButton}
       </ButtonBar>
-    </div>
+    </Wrapper>
   )
 }
 

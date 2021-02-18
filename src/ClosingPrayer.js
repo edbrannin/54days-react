@@ -1,6 +1,7 @@
 import React from 'react'
-import useCurrentDay from './currentDay'
+import FitText from '@kennethormandy/react-fittext'
 
+import useCurrentDay from './currentDay'
 import LinkButton from './LinkButton'
 import ClosingPrayersTabPanel from './ClosingPrayersTabPanel'
 
@@ -12,7 +13,9 @@ const ClosingPrayer = () => {
       minHeight: '80%',
       gridTemplateRows: '1fr auto',
     }}>
-      <ClosingPrayersTabPanel todayIntention={todayIntention} />
+      <FitText compressor={3}>
+        <ClosingPrayersTabPanel todayIntention={todayIntention} />
+      </FitText>
       <LinkButton to="/" onClick={incrementDay}>Done</LinkButton>
     </div>
   )

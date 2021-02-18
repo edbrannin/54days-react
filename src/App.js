@@ -18,27 +18,27 @@ import Overview from './Overview'
 const App = () => (
   <Router>
     <div style={{
-      margin: '1em',
-      height: '100%',
+      padding: '1em',
     }}>
-      <h1 style={{
-        textAlign: 'center',
-      }}>54-Day Rosary Novena</h1>
-      <Switch>
-        <Route exact path="/">
-          <Overview/>
-        </Route>
-        <Route path="/pray/closing">
-          <ClosingPrayer/>
-        </Route>
-        <Route path="/pray/:mysteryCategory/:decade">
-          <PrayMystery/>
-        </Route>
-        <Route path="/pray/:mysteryCategory">
-          <Pray/>
-        </Route>
-      </Switch>
-
+      <div>
+        <h1 style={{
+          textAlign: 'center',
+        }}>54-Day Rosary Novena</h1>
+        <Switch>
+          <Route exact path="/">
+            <Overview />
+          </Route>
+          <Route path="/pray/closing">
+            <ClosingPrayer />
+          </Route>
+          <Route path="/pray/:mysteryCategory/:decade">
+            <PrayMystery />
+          </Route>
+          <Route path="/pray/:mysteryCategory">
+            <Pray />
+          </Route>
+        </Switch>
+      </div>
     </div>
   </Router>
 )

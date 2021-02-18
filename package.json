@@ -12,13 +12,15 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
+    "@kennethormandy/react-fittext": "^0.6.0",
     "@rooks/use-localstorage": "^1.1.0",
     "moment": "^2.24.0",
     "moment-easter": "https://github.com/nzdenek/moment-easter.git#module-checks",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-tabs": "^3.0.0"
+    "react-tabs": "^3.0.0",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
