@@ -1,16 +1,12 @@
-import React from 'react'
+import styled from 'styled-components';
 
-const ButtonBar = ({ children, style }) => (
-  <div style={{
-    display: 'flex',
-    flex: 'auto',
-    justifyContent: 'space-evenly',
-    width: '100%',
-    paddingBottom: '1em',
-    ...style,
-  }}>
-    {children}
-  </div>
-)
+
+const ButtonBar = styled.div`
+  display: flex;
+  flex: auto;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-bottom: 1em;
+`;
 
 export default ButtonBar

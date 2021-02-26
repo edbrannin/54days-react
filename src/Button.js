@@ -1,18 +1,22 @@
 
 import React from 'react'
+import styled from 'styled-components';
 
-const Button = ({ onClick, children, style = {} }) => (
-  <div onClick={onClick} style={{
-    textAlign: 'center',
-    border: '1px solid gray',
-    backgroundColor: '#222',
-    borderRadius: '1em',
-    padding: '1em',
-    margin: '1em',
-    ...style,
-  }}>
+// TODO https://styled-components.com/docs/basics#attaching-additional-props
+const ButtonWrapper = styled.div`
+  text-align: center;
+  border: 1px solid gray;
+  background-color: #222;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em;
+  flex: 1;
+`;
+
+const Button = ({ onClick, children }) => (
+  <ButtonWrapper onClick={onClick}>
     {children}
-  </div>
+  </ButtonWrapper>
 )
 
 export default Button

@@ -6,6 +6,8 @@ import useCurrentDay from './currentDay'
 import LinkButton from './LinkButton'
 
 import LATIN_MYSTERY_NAMES from '../data/mystery-links.json'
+import ButtonBar from './ButtonBar';
+import ProgressTracker from './ProgressTracker';
 
 const getMysteries = (mysteriesByWeekday, { todayMysteries }) => {
   if (!mysteriesByWeekday) {
@@ -42,40 +44,24 @@ const Overview = () => {
   const { currentDay, decrementDay, incrementDay, todayIntention, todayMysteries, targetCurrentDay } = useCurrentDay()
   const { actualMysteries, mysteriesByWeekday, toggleMysteriesByWeekday } = useMysteries({ todayMysteries });
   const latinMysteryName = LATIN_MYSTERY_NAMES[actualMysteries.toLowerCase()].toLowerCase()
-  const behind = currentDay < targetCurrentDay
-  const targetPerDay = Math.round((54 - currentDay) * 10 / (54 - targetCurrentDay)) / 10
   return (
     <div style={{
       textAlign: 'center',
     }}>
-      <h2>Progress</h2>
-      <h3>This is day {currentDay + 1}</h3>
-      {behind && (
-        <React.Fragment>
-          <p>
-            If you started with Lent and want to end on Mercy Sunday,
-            you should be on day {targetCurrentDay}.
-          </p>
-          <p>To catch up, say {targetPerDay} rosaries per day.</p>
-        </React.Fragment>
-      )}
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-evenly',
-        width: '100%',
-      }}>
+      <ProgressTracker currentDay={currentDay} targetCurrentDay={targetCurrentDay} />
+      <ButtonBar>
         <Button style={{ width: '45%' }} onClick={decrementDay}>
           &larr; Previous Day
         </Button>
         <Button style={{ width: '45%' }} onClick={incrementDay}>
           Next Day &rarr;
         </Button>
-      </div>
+      </ButtonBar>
       <h3>Mysteries: {actualMysteries}</h3>
       <h3>Intention type: {todayIntention}</h3>
-      <h2>Start</h2>
-      <LinkButton to={`/pray/${actualMysteries}`}>Show Mysteries</LinkButton>
+      <h2>Time to pray</h2>
       <LinkButton to={`/pray/${actualMysteries}/1`}>Start</LinkButton>
+      <LinkButton to={`/pray/${actualMysteries}`}>Show Mysteries</LinkButton>
       <a href={`rosary://${latinMysteryName}`} style={{
         color: 'white',
         textDecoration: 'none',

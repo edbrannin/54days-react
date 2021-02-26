@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import styled from 'styled-components';
 
 import "./react-tabs-pill.css";
 import './App.css'
@@ -15,31 +16,32 @@ import ClosingPrayer from './ClosingPrayer'
 
 import Overview from './Overview'
 
+const PaddingWrapper = styled.div`
+  min-height: 95vh;
+  padding: 1em;
+`;
+
 const App = () => (
   <Router>
-    <div style={{
-      padding: '1em',
-    }}>
-      <div>
-        <h1 style={{
-          textAlign: 'center',
-        }}>54-Day Rosary Novena</h1>
-        <Switch>
-          <Route exact path="/">
-            <Overview />
-          </Route>
-          <Route path="/pray/closing">
-            <ClosingPrayer />
-          </Route>
-          <Route path="/pray/:mysteryCategory/:decade">
-            <PrayMystery />
-          </Route>
-          <Route path="/pray/:mysteryCategory">
-            <Pray />
-          </Route>
-        </Switch>
-      </div>
-    </div>
+    <PaddingWrapper>
+      <h1 style={{
+        textAlign: 'center',
+      }}>54-Day Rosary Novena</h1>
+      <Switch>
+        <Route exact path="/">
+          <Overview />
+        </Route>
+        <Route path="/pray/closing">
+          <ClosingPrayer />
+        </Route>
+        <Route path="/pray/:mysteryCategory/:decade">
+          <PrayMystery />
+        </Route>
+        <Route path="/pray/:mysteryCategory">
+          <Pray />
+        </Route>
+      </Switch>
+    </PaddingWrapper>
   </Router>
 )
 

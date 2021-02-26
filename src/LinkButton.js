@@ -2,8 +2,7 @@ import React from 'react'
 import { useHistory } from "react-router-dom";
 import Button from './Button';
 
-
-const LinkButton = ({ to, children, onClick }) => {
+const LinkButton = ({ to, children, onClick, style }) => {
   const history = useHistory();
 
   const myOnClick = () => {
@@ -14,7 +13,7 @@ const LinkButton = ({ to, children, onClick }) => {
     }
     history.push(to)
   }
-  return <Button onClick={myOnClick}>{children}</Button>
+  return <Button onClick={myOnClick} style={style}>{children}</Button>
 }
 
 export default LinkButton
