@@ -26,7 +26,7 @@ const ProgressTracker = ({ currentDay, targetCurrentDay }) => {
         <React.Fragment>
           <p>
             If you started with Lent and want to end on Mercy Sunday,
-            you should be on day {targetCurrentDay}.
+            you should be on day {targetCurrentDay + 1}.
           </p>
           {makeUpNote}
         </React.Fragment>
