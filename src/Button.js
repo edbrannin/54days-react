@@ -11,6 +11,7 @@ const ButtonWrapper = styled.div`
   padding: 1em;
   margin: 1em;
   flex: 1;
+  cursor: pointer;
 `;
 
 const Button = ({ onClick, children }) => (
